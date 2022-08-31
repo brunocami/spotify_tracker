@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/brunocami/spotify_tracker.git",
   "name": "spotify-app",
   "version": "1.0.0",
   "description": "",
@@ -7,7 +8,9 @@
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "server": "nodemon index.js",
     "client": "cd client && npm start",
-    "postinstall": "cd client && npm install"
+    "postinstall": "cd client && npm install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
